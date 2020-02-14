@@ -1,6 +1,6 @@
 CREATE TABLE [dbo].[Suppliers]
 (
-[SupplierID] [int] NOT NULL,
+[SupplierID] [int] NOT NULL IDENTITY(1, 1),
 [CompanyName] [varchar] (100) COLLATE Latin1_General_CI_AS NOT NULL,
 [ContactName] [varchar] (100) COLLATE Latin1_General_CI_AS NOT NULL,
 [Adress] [varchar] (200) COLLATE Latin1_General_CI_AS NOT NULL,
@@ -8,8 +8,8 @@ CREATE TABLE [dbo].[Suppliers]
 [Region] [varchar] (100) COLLATE Latin1_General_CI_AS NOT NULL,
 [PostalCode] [varchar] (50) COLLATE Latin1_General_CI_AS NOT NULL,
 [Country] [varchar] (100) COLLATE Latin1_General_CI_AS NOT NULL,
-[Phone] [int] NOT NULL
+[Phone] [varchar] (15) COLLATE Latin1_General_CI_AS NOT NULL
 ) ON [PRIMARY]
 GO
-ALTER TABLE [dbo].[Suppliers] ADD CONSTRAINT [PK__Supplier__4BE66694C320D69A] PRIMARY KEY CLUSTERED  ([SupplierID]) ON [PRIMARY]
+ALTER TABLE [dbo].[Suppliers] ADD CONSTRAINT [PK__Supplier__4BE66694100C91A1] PRIMARY KEY CLUSTERED  ([SupplierID]) ON [PRIMARY]
 GO
