@@ -6,7 +6,7 @@ CREATE TABLE [dbo].[Cijfers]
 [cijfer] [decimal] (18, 0) NOT NULL
 ) ON [PRIMARY]
 GO
-ALTER TABLE [dbo].[Cijfers] ADD CONSTRAINT [PK_Cijfers] PRIMARY KEY CLUSTERED  ([studentID], [vakID], [cijferID]) ON [PRIMARY]
+ALTER TABLE [dbo].[Cijfers] ADD CONSTRAINT [PK_Cijfers_1] PRIMARY KEY CLUSTERED  ([studentID], [vakID], [cijferID]) ON [PRIMARY]
 GO
 ALTER TABLE [dbo].[Cijfers] ADD CONSTRAINT [FK_Cijfers_Student] FOREIGN KEY ([studentID]) REFERENCES [dbo].[Student] ([studentID])
 GO
